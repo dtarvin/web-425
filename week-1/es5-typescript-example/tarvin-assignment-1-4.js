@@ -1,6 +1,6 @@
 /*
 ; ============================================
-; Title:  tarvin-assignment-1.4.ts
+; Title:  tarvin-assignment-1.4.js
 ; Author: Richard Krasso
 ; Modified By: David Tarvin
 ; Date:   08 Jul 2019

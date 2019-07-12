@@ -1,6 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
 /*
 ; ============================================
 ; Title:  app.module.ts
@@ -10,6 +7,9 @@ import { NgModule } from '@angular/core';
 ; Description: Exercise 1.5 - Modules
 ;===========================================  
 */
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ShippingModule } from './shipping/shipping.module';

@@ -10,7 +10,7 @@ export class LoginGuard implements CanActivate {
     let loggedIn = Math.random() < 0.5;
 
     if (!loggedIn) {
-      alert("You're not logged in and will be redirected to Login page");
+      alert("You must log in to view that page. Taking you to login.");
       this.router.navigate(["/login"]);
     }
 

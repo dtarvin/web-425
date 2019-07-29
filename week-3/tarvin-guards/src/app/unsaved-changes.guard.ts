@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  unsaved-changes.guard.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   27 Jul 2019
+; Description: Assignment 3.4 - Guarding Routes
+;=============================================
+*/
+
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { Injectable } from "@angular/core";
 import { CanDeactivate } from '@angular/router';

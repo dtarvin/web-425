@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  home.component.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   27 Jul 2019
+; Description: Exercise 3.2 - Passing Data To Routes
+;=============================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

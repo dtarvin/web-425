@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  app-routing.module.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   27 Jul 2019
+; Description: Assignment 3.4 - Guarding Routes
+;=============================================
+*/
+
 import { UnsavedChangesGuard } from './unsaved-changes.guard';
 import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login.guard';

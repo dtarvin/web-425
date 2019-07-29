@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  app-routing.module.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   27 Jul 2019
+; Description: Exercise 3.3 - Child Routes
+;=============================================
+*/
+
 import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';

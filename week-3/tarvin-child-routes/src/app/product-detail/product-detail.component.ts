@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  product-detail.component.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   27 Jul 2019
+; Description: Exercise 3.3 - Child Routes
+;=============================================
+*/
+
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 

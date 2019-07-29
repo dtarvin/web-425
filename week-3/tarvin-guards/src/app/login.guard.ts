@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  login.guard.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   27 Jul 2019
+; Description: Assignment 3.4 - Guarding Routes
+;=============================================
+*/
+
 import { Injectable } from "@angular/core";
 import { Router, CanActivate } from '@angular/router';
 

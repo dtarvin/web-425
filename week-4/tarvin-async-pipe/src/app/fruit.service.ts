@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  fruit.service.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   02 Aug 2019
+; Description: Assignment 4.4
+;=============================================
+*/
+
 import { Fruit } from './fruit';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';

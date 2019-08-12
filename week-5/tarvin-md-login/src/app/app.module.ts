@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  app.module.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   10 Aug 2019
+; Description: Assignment 5.3
+;=============================================
+*/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

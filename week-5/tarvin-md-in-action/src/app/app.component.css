@@ -1,0 +1,19 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: white;
+}
+
+.left {
+  background-color: aqua;
+}
+
+.right {
+  background-color: chocolate;
+}
+ .parent {
+   height: 100vh;
+ }

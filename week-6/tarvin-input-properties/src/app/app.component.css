@@ -1,0 +1,41 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+  }
+  
+  .left {
+    background-color: aqua;
+  }
+  
+  .right {
+    background-color: chocolate;
+  }
+   .parent {
+     height: 100vh;
+   }
+
+   input {
+     /* margin: 0px auto; */
+     /* padding-left: 50px; */
+    
+   }
+
+   .wrapper {
+    width: 100%;
+    /* margin: 20vh auto; */
+  }
+
+  .frm-order {
+    width: 30%;
+    margin: 20vh auto;
+  }
+  
+  .input-panel {
+    border: 1px solid black;
+    margin-bottom: 10vh;
+    text-align: center;
+  }

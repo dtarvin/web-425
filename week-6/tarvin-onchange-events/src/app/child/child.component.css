@@ -1,0 +1,8 @@
+.child {
+  background: lightgray;
+}
+
+span {
+  width: 100px;
+  float: left;
+}

@@ -14,12 +14,10 @@
 .right {
   background-color: chocolate;
 }
- .parent {
-   height: 100vh;
- }
-
+ 
  .wrapper {
   width: 100%;
+  height: 100vh;
 }
 
 .frm-login {
@@ -27,12 +25,7 @@
   margin: 20vh auto;
 }
 
-button {
-  margin-left: 90%;
-
-}
-
 mat-card-actions {
-  /* text-align: right; */
+  text-align: right;
   margin-right: 20px;
 }

@@ -1,0 +1,40 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+  }
+  
+  .left {
+    background-color: aqua;
+  }
+  
+  .right {
+    background-color: chocolate;
+  }
+   
+   .wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .frm-login {
+    width: 80%;
+    margin: 20vh auto;
+  }
+  
+  mat-card-actions {
+    text-align: right;
+    margin-right: 20px;
+  }
+  
+  .error {
+    color: red;
+}
+
+.hasError {
+    border: 1px solid red;
+}
+

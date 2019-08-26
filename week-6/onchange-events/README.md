@@ -1,6 +1,10 @@
 # OnchangeEvents
 
+<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+=======
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+>>>>>>> 6ce5f1c9da598328764700c1af1d3c03ad03edd8
 
 ## Development server
 

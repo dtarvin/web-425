@@ -1,0 +1,38 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: white;
+}
+
+.left {
+  background-color: aqua;
+}
+
+.right {
+  background-color: chocolate;
+}
+ .parent {
+   height: 100vh;
+ }
+
+ .wrapper {
+  width: 100%;
+}
+
+.frm-login {
+  width: 80%;
+  margin: 20vh auto;
+}
+
+button {
+  margin-left: 90%;
+
+}
+
+mat-card-actions {
+  /* text-align: right; */
+  margin-right: 20px;
+}

@@ -19,5 +19,5 @@ export class AppComponent {
   title = 'tarvin-onchange-events';
 
   myGreeting = 'hello';
-  myUser: { name: string } = { name: 'John' }
+  myUser: { name: string } = { name: 'John' };
 }

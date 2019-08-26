@@ -1,12 +1,8 @@
 .child {
-    background: lightgray;
-    width: 60%;
-    margin: 0 auto;
-  }
+  background: lightgray;
+}
 
-  label {
-    display: block;
-    float: left;
-    clear: left;
-    width: 100px;
-  }
+span {
+  width: 100px;
+  float: left;
+}

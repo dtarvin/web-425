@@ -1,0 +1,17 @@
+body {
+  height: 100%;
+}
+
+.home {
+  z-index: 1;
+}
+
+.background {
+  background-image: url('../../../assets/images/kisspng-laptop-computer-repair.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}

@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <mat-card class="services-panel frm-services-panel">
+    <mat-card-header class="frm-services-header">
+      <mat-toolbar class="frm-services-toolbar">
+        Available Services
+      </mat-toolbar>
+    </mat-card-header>
+
+    <mat-card-content class="frm-services-body">
+      <mat-form-field class="frm-services-formfield">
+        <mat-checkbox  *ngFor="let repair of repairs | async">
+          <div fxLayout="row">
+            <div class="frm-services-name">
+              {{ repair.name }}
+            </div>
+            <div class="rightSide">
+              {{ repair.price }}
+            </div>
+          </div>
+          <!-- {{ repair.name }} {{ repair.price }} -->
+        </mat-checkbox>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+</div>

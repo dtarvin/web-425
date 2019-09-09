@@ -7,7 +7,7 @@
     </mat-card-header>
 
     <mat-card-content class="frm-services-body">
-      <mat-checkbox *ngFor="let fix of fixes" value="{{fix.name}} {{fix.price}}" [(ngModel)]="fix.checked">
+      <mat-checkbox *ngFor="let fix of fixes" value="{{fix.name}} {{fix.price}}" [(ngModel)]="fix.checked" (change)="getCheckboxes()">
           <div fxLayout="row">
             <div class="frm-services-name">
               {{ fix.name }}
@@ -25,6 +25,7 @@
       <mat-form-field>
         <input matInput placeholder="Cost of Labor @$50.00/hr">
       </mat-form-field>
+      {{ selectedFixes | json }}
     </mat-card-content>
     <mat-card-actions class="frm-login-actions">
       <button mat-raised-button class="btn-login button1" (click)="getInvoice()">Calculate</button>

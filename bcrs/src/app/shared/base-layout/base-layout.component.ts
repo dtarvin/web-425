@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  base-layout.component.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   08 Sep 2019
+; Description: Bob's Computer Repair Shop
+;=============================================
+*/
+
 import { InvoiceSummaryDialogComponent } from './../../pages/invoice-summary-dialog/invoice-summary-dialog.component';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { tap, filter, map } from 'rxjs/operators';
@@ -17,9 +27,7 @@ export class BaseLayoutComponent implements OnInit, OnDestroy {
   subs: Subscription[] = []
   selectedFixes: Fix[] = [];
 
-
-
-  constructor(private fixService: FixService, public dialog: MatDialog) { }
+  constructor(private fixService: FixService, private dialog: MatDialog) { }
 
   ngOnInit() {
     const sub = this.fixService.getFix()
@@ -31,12 +39,21 @@ export class BaseLayoutComponent implements OnInit, OnDestroy {
 
   getCheckboxes() {
     this.selectedFixes = this.fixes
-      .filter(f => f.checked)
-        return this.selectedFixes;
+      .filter(f => f.checked);
+        // return this.selectedFixes;
   }
 
   getInvoice() {
-    this.dialog.open(InvoiceSummaryDialogComponent);
+
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.data = {
+      selectedFixes: this.selectedFixes
+    }
+    const dialogRef = this.dialog.open(InvoiceSummaryDialogComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(
+      data => console.log("Dialog output:", data)
+    )
 
   }
 

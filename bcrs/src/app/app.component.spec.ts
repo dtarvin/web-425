@@ -1,3 +1,13 @@
+/*
+; ============================================
+; Title:  app.component.spec.ts
+; Author: Richard Krasso
+; Modified By: David Tarvin
+; Date:   07 Sep 2019
+; Description: Bob's Computer Repair Shop
+;=============================================
+*/
+
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';

@@ -1,4 +1,3 @@
-import { FixService } from './shared/fix.service';
 /*
 ; ============================================
 ; Title:  app.module.ts
@@ -11,6 +10,7 @@ import { FixService } from './shared/fix.service';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FixService } from './shared/fix.service';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,7 +31,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { InvoiceSummaryDialogComponent } from './pages/invoice-summary-dialog/invoice-summary-dialog.component';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { RepairService } from './shared/repair.service';
 
 @NgModule({
   declarations: [
@@ -41,6 +40,7 @@ import { RepairService } from './shared/repair.service';
     BaseLayoutComponent,
     HeaderComponent
   ],
+  entryComponents: [InvoiceSummaryDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -58,7 +58,7 @@ import { RepairService } from './shared/repair.service';
     FormsModule,
     MatDialogModule
   ],
-  providers: [RepairService, FixService],
+  providers: [FixService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

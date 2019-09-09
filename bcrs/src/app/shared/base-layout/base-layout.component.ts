@@ -1,22 +1,52 @@
-import { Observable } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
-import { RepairService } from '../repair.service';
-import { Repair } from '../repair';
+import { InvoiceSummaryDialogComponent } from './../../pages/invoice-summary-dialog/invoice-summary-dialog.component';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { tap, filter, map } from 'rxjs/operators';
+import { Fix } from '../fix';
+import { FixService } from '../fix.service';
+import { Observable, Subscription } from 'rxjs';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 
 @Component({
   selector: 'app-base-layout',
   templateUrl: './base-layout.component.html',
-  styleUrls: ['./base-layout.component.scss'],
-  providers: [RepairService]
+  styleUrls: ['./base-layout.component.scss']
 })
-export class BaseLayoutComponent implements OnInit {
+export class BaseLayoutComponent implements OnInit, OnDestroy {
 
-  repairs: Observable<Repair[]>;
+  fixes: Fix[];
+  subs: Subscription[] = []
+  selectedFixes: Fix[] = [];
 
-  constructor(private repairService: RepairService) { }
+
+
+  constructor(private fixService: FixService, public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.repairs = this.repairService.getRepair();
+    const sub = this.fixService.getFix()
+      .subscribe(fixes => {
+        this.fixes = fixes;
+      });
+      this.subs.push(sub);
   }
 
+  getCheckboxes() {
+    this.selectedFixes = this.fixes
+      .filter(f => f.checked)
+        return this.selectedFixes;
+  }
+
+  getInvoice() {
+    this.dialog.open(InvoiceSummaryDialogComponent);
+
+  }
+
+  ngOnDestroy() {
+    for (const sub of this.subs) {
+      if(sub) {
+        try {
+          sub.unsubscribe();
+        } catch {}
+      }
+    }
+  }
 }

@@ -1,15 +1,22 @@
 .frm-services-name {
   height: 100%;
   width: 150px;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .rightSide {
   width: 50px;
   text-align: right;
-  border: 1px solid blue;
+  padding-right: 15px;
+  // border: 1px solid blue;
 }
 
 span.mat-checkbox-label {
   min-width: 250px;
+}
+
+.frm-services-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
 }

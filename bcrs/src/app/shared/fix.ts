@@ -1,6 +1,6 @@
-export interface Repair {
+export interface Fix {
   id: number;
   name: string;
   price: string;
-  lastName: string;
+  checked: boolean;
 }

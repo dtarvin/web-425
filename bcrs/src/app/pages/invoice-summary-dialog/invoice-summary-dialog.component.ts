@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { BaseLayoutComponent } from './../../shared/base-layout/base-layout.component';
+import { Component, OnInit, Input } from '@angular/core';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-invoice-summary-dialog',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoiceSummaryDialogComponent implements OnInit {
 
-  constructor() { }
+  @Input() public invoice;
+
+  constructor(private dialog: MatDialogRef<BaseLayoutComponent>) { }
 
   ngOnInit() {
   }
 
+  confirm() {
+    this.dialog.close();
+    location.reload();
+  }
 }

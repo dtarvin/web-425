@@ -1,3 +1,4 @@
+import { FixService } from './shared/fix.service';
 /*
 ; ============================================
 ; Title:  app.module.ts
@@ -10,7 +11,6 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -52,9 +54,11 @@ import { RepairService } from './shared/repair.service';
     MatMenuModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FormsModule,
+    MatDialogModule
   ],
-  providers: [RepairService],
+  providers: [RepairService, FixService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

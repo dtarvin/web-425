@@ -1,9 +1,8 @@
 <!-- <div class="container"> -->
 <h2 mat-dialog-title>Invoice</h2>
 <mat-dialog-content>
-  {{ selectedFixes | json }}
   <ul>
-    <li *ngFor="let selectedFix of selectedFixes">
+    <li *ngFor="let selectedFix of data?.selectedFixes">
       <div fxLayout="row">
         <div class="frm-invoice-name">
           {{ selectedFix.name }}
@@ -14,7 +13,7 @@
       </div>
     </li>
   </ul>
-  Total:
+  Total: {{ totalCost | currency }}
 </mat-dialog-content>
 
 <mat-dialog-actions>

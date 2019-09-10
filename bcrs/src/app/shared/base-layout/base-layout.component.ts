@@ -26,6 +26,7 @@ export class BaseLayoutComponent implements OnInit, OnDestroy {
   fixes: Fix[];
   subs: Subscription[] = []
   selectedFixes: Fix[] = [];
+  totalCost: number = 0;
 
   constructor(private fixService: FixService, private dialog: MatDialog) { }
 
@@ -41,13 +42,20 @@ export class BaseLayoutComponent implements OnInit, OnDestroy {
     this.selectedFixes = this.fixes
       .filter(f => f.checked);
         // return this.selectedFixes;
+    for (let service of this.selectedFixes) {
+      console.log('price is ' + service.price);
+      this.totalCost = (this.totalCost + service.price);
+    }
+    console.log('Total price is ' + this.totalCost);
+    return this.totalCost.toFixed(2);
   }
 
   getInvoice() {
 
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = {
-      selectedFixes: this.selectedFixes
+      selectedFixes: this.selectedFixes,
+      totalCost: this.totalCost
     }
     const dialogRef = this.dialog.open(InvoiceSummaryDialogComponent, dialogConfig);
 

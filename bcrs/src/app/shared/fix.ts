@@ -11,6 +11,6 @@
 export interface Fix {
   id: number;
   name: string;
-  price: string;
+  price: number;
   checked: boolean;
 }

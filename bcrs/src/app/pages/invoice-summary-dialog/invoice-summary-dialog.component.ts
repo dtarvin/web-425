@@ -19,12 +19,15 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class InvoiceSummaryDialogComponent implements OnInit {
 
-  @Input() selectedFixes;
+  @Input() selectedFixes: string;
+  @Input() totalCost: number;
 
   constructor(private dialogRef: MatDialogRef<BaseLayoutComponent>,
-              @Inject(MAT_DIALOG_DATA) data) { }
+              @Inject(MAT_DIALOG_DATA) public data) { }
 
   ngOnInit() {
+    this.selectedFixes = this.data.selectedFixes;
+    this.totalCost = this.data.totalCost;
   }
 
   confirm() {
